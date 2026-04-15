@@ -1,4 +1,4 @@
-package htw.projekt.web_app.travel;
+package htw.projekt.web_app.travel.model;
 
 import java.time.LocalDate;
 
