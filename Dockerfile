@@ -1,15 +1,15 @@
 #
 # Build stage
 #
-FROM gradle:9-jdk25 AS build
+FROM gradle:8.13-jdk21 AS build
 WORKDIR /home/gradle/project
 COPY --chown=gradle:gradle . .
 RUN gradle build --no-daemon
 
-LABEL org.name="QuynhAnhHieuMinh"
 #
 # Package stage
 #
-FROM eclipse-temurin:25-jdk-jammy
+FROM eclipse-temurin:21-jdk-jammy
+LABEL org.name="QuynhAnhHieuMinh"
 COPY --from=build /home/gradle/project/build/libs/web-app-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
