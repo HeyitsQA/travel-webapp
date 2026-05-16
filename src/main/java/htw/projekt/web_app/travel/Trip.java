@@ -1,16 +1,16 @@
 package htw.projekt.web_app.travel;
-import java.time.LocalDate;
 
 public class Trip {
-     private Long id;
 
-     private String name;
-     private String status;
+    private Long id;
 
-     private String startDate;
-
-     private String endDate;
+    private String name;
+    private String status;
+    private String startDate;
+    private String endDate;
     private String description;
+
+    public Trip() {}
 
     public Trip(Long id, String name, String status, String startDate, String endDate) {
         this.id = id;
@@ -19,7 +19,6 @@ public class Trip {
         this.startDate = startDate;
         this.endDate = endDate;
     }
-
 
     public Long getId() {
         return id;

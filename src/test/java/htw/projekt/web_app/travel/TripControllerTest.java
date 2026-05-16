@@ -1,13 +1,19 @@
 package htw.projekt.web_app.travel;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
 class TripControllerTest {
 
     @Test
-    void contextLoads() {
+    void getAllTripsReturnsEmptyListInitially() {
+        TripController controller = new TripController();
+        assertTrue(controller.getAllTrips().isEmpty());
     }
 
+    @Test
+    void getTripByIdReturnsNullWhenNotFound() {
+        TripController controller = new TripController();
+        assertNull(controller.getTripById(99L));
+    }
 }
