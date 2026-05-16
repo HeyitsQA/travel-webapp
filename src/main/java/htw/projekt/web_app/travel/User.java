@@ -1,6 +1,11 @@
 package htw.projekt.web_app.travel;
+import jakarta.persistence.*;
 
+@Entity
+@Table (name = "user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userID;
     private String userName;
     private String email;

@@ -1,22 +1,34 @@
 package htw.projekt.web_app.travel;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "places")
 public class Place {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long placeId;
-    private Long id;     // which trip it belongs to
+
+    @ManyToOne
+    @JoinColumn(name = "trip_id")
+    private Trip trip;
+
     private String name;
-    private String category; // "restaurant", "sight", "cafe"
-    private String status;   // "visited" or "planned"
+    private String category;
+    private String status;
     private String notes;
     private Double rating;
 
-    public Place( long placeId, long id, String name, String category, String status, String notes, String rating){
-        this.placeId = placeId;
-        this.id = id;
+    public Place() {}
+
+    public Place(Trip trip, String name, String category, String status, String notes, Double rating) {
+        this.trip = trip;
         this.name = name;
         this.category = category;
         this.status = status;
         this.notes = notes;
-        this.rating = Double.parseDouble(rating);
+        this.rating = rating;
     }
 
     public Long getPlaceId() {
@@ -27,12 +39,12 @@ public class Place {
         this.placeId = placeId;
     }
 
-    public Long getId() {
-        return id;
+    public Trip getTrip() {
+        return trip;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setTrip(Trip trip) {
+        this.trip = trip;
     }
 
     public String getName() {
@@ -75,4 +87,3 @@ public class Place {
         this.rating = rating;
     }
 }
-

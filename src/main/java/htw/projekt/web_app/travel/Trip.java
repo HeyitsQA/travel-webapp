@@ -1,7 +1,12 @@
 package htw.projekt.web_app.travel;
 
-public class Trip {
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "trips")
+public class Trip {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
