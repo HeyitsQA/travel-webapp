@@ -1,4 +1,4 @@
-package htw.projekt.web_app.travel.model;
+package htw.projekt.web_app.travel;
 
 public class User {
     private long userID;

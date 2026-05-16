@@ -1,3 +1,5 @@
+package htw.projekt.web_app.travel;
+
 public class Place {
     private Long placeId;
     private Long id;     // which trip it belongs to

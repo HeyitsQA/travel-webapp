@@ -1,19 +1,18 @@
-package htw.projekt.web_app.travel.model;
-
+package htw.projekt.web_app.travel;
 import java.time.LocalDate;
 
 public class Trip {
-     private long id;
-    @NotBlank
+     private Long id;
+
      private String name;
      private String status;
-    @NotNull
+
      private String startDate;
-    @NotNull
+
      private String endDate;
     private String description;
 
-    public Trip(long id, String name, String status, String startDate, String endDate) {
+    public Trip(Long id, String name, String status, String startDate, String endDate) {
         this.id = id;
         this.name = name;
         this.status = status;

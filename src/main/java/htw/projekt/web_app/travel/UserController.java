@@ -1,4 +1,4 @@
-package htw.projekt.web_app.travel.controller;
+package htw.projekt.web_app.travel;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
