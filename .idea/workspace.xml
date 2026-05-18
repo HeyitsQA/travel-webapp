@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3720c2fb-0a56-4c2f-a050-b9d1f91fc986" name="Changes" comment="verschoben">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Trip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/TripController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/travel/Expense.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/travel/ExpenseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/travel/Trip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/travel/TripController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/travel/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/travel/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/travel/WebAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WebAppApplication.java" afterDir="false" />
+    <list default="true" id="3720c2fb-0a56-4c2f-a050-b9d1f91fc986" name="Changes" comment="add new classes and dependencies">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +34,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -55,12 +50,15 @@
     &quot;assignee&quot;: &quot;HeyitsQA&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/HeyitsQA/travel-webapp.git",
-    "accountId": "9bc49de0-2c42-4faa-9b40-0c18a129d787"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HeyitsQA/travel-webapp.git&quot;,
+    &quot;accountId&quot;: &quot;9bc49de0-2c42-4faa-9b40-0c18a129d787&quot;
   }
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -72,31 +70,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/quynhanh/Desktop/UNI/Semester3/Prog3/travel-webapp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/quynhanh/Desktop/UNI/Semester3/Prog3/travel-webapp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/htw.project.web_app.travel" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/travel" />
-      <recent name="$PROJECT_DIR$/src/main/travel/model" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WebAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="htw.projekt.web-app.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="htw.projekt.web_app.travel.WebAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -120,6 +130,7 @@
       <workItem from="1778751651038" duration="2000" />
       <workItem from="1778751692816" duration="7000" />
       <workItem from="1778754493654" duration="5809000" />
+      <workItem from="1778857211975" duration="14451000" />
     </task>
     <task id="LOCAL-00001" summary="verschoben">
       <option name="closed" value="true" />
@@ -129,7 +140,95 @@
       <option name="project" value="LOCAL" />
       <updated>1778062532654</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor and update components">
+      <option name="closed" value="true" />
+      <created>1778858319384</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778858319384</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add dockerfile to deploy backend">
+      <option name="closed" value="true" />
+      <created>1778858935510</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778858935510</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update dockerfile">
+      <option name="closed" value="true" />
+      <created>1778859578970</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778859578970</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update springboot version">
+      <option name="closed" value="true" />
+      <created>1778860456683</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778860456683</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update files">
+      <option name="closed" value="true" />
+      <created>1778889724991</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778889724991</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update files">
+      <option name="closed" value="true" />
+      <created>1778889801236</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778889801236</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update files">
+      <option name="closed" value="true" />
+      <created>1778890111067</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1778890111067</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update dependencies">
+      <option name="closed" value="true" />
+      <created>1778891440879</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778891440879</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add new classes and dependencies">
+      <option name="closed" value="true" />
+      <created>1778897071206</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1778897071206</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add new classes and dependencies">
+      <option name="closed" value="true" />
+      <created>1778897689304</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1778897689304</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add new classes and dependencies">
+      <option name="closed" value="true" />
+      <created>1778897966922</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1778897966922</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +247,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="verschoben" />
-    <option name="LAST_COMMIT_MESSAGE" value="verschoben" />
+    <MESSAGE value="refactor and update components" />
+    <MESSAGE value="add dockerfile to deploy backend" />
+    <MESSAGE value="update dockerfile" />
+    <MESSAGE value="update springboot version" />
+    <MESSAGE value="update files" />
+    <MESSAGE value="update dependencies" />
+    <MESSAGE value="add new classes and dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new classes and dependencies" />
   </component>
 </project>
