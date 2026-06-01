@@ -16,7 +16,7 @@ public class PlaceController {
     // Get all places by trip ID
     @GetMapping("/trip/{tripId}")
     public List<Place> getPlacesByTrip(@PathVariable Long tripId) {
-        return placeRepository.findByTripId(tripId);
+        return placeRepository.findByTrip_TripId(tripId);
     }
 
     // Get single place by ID

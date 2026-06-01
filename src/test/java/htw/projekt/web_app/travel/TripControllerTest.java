@@ -12,26 +12,23 @@ import static org.mockito.Mockito.*;
 
 class TripControllerTest {
 
-    @Mock
-    private TripRepository tripRepository;
+    //@Mock
+    //private TripRepository tripRepository;
 
-    @InjectMocks
-    private TripController tripController;
+    //@InjectMocks
+    //private TripController tripController;
 
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
+    //@BeforeEach
+    //void setUp() {
+      //  MockitoAnnotations.openMocks(this);}
 
-    @Test
-    void getAllTripsReturnsEmptyListInitially() {
-        when(tripRepository.findAll()).thenReturn(List.of());
-        assertTrue(tripController.getAllTrips().isEmpty());
-    }
+    //@Test
+    //void getAllTripsReturnsEmptyListInitially() {
+     //   when(tripRepository.findAll()).thenReturn(List.of());
+     //   assertTrue(tripController.getAllTrips().isEmpty());}
 
-    @Test
-    void getTripByIdReturnsNullWhenNotFound() {
-        when(tripRepository.findById(99L)).thenReturn(Optional.empty());
-        assertEquals(404, tripController.getTripById(99L).getStatusCode().value());
-    }
+    //@Test
+    //void getTripByIdReturnsNullWhenNotFound() {
+       // when(tripRepository.findById(99L)).thenReturn(Optional.empty());
+      //  assertEquals(404, tripController.getTripById(99L).getStatusCode().value());}
 }

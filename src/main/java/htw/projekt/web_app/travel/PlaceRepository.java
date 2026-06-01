@@ -6,5 +6,5 @@ import java.util.List;
 
 @Repository
 public interface PlaceRepository extends JpaRepository<Place, Long> {
-    List<Place> findByTripId(Long tripId);
+    List<Place> findByTrip_TripId(Long tripId);
 }
