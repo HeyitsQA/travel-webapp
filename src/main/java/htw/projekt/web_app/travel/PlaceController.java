@@ -44,8 +44,7 @@ public class PlaceController {
                     place.setStatus(placeDetails.getStatus());
                     place.setNotes(placeDetails.getNotes());
                     place.setRating(placeDetails.getRating());
-                    place.setLatitude(placeDetails.getLatitude());
-                    place.setLongitude(placeDetails.getLongitude());
+                    place.setAddress(placeDetails.getAddress());  // ← replaced lat/long
                     place.setVisitDate(placeDetails.getVisitDate());
                     place.setUpdatedAt(java.time.LocalDateTime.now());
                     Place updated = placeRepository.save(place);
