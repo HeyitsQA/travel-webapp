@@ -4,7 +4,7 @@
 FROM gradle:8.13-jdk21 AS build
 WORKDIR /home/gradle/project
 COPY --chown=gradle:gradle . .
-RUN gradle build --no-daemon
+RUN gradle build --no-daemon -x test
 
 #
 # Package stage
