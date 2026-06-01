@@ -1,36 +1,52 @@
 package htw.projekt.web_app.travel;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "trips")
 public class Trip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long tripId;
 
     private String name;
-    private String status;
+    private String destination;
     private String startDate;
     private String endDate;
+    private String status;
     private String description;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public Trip() {}
 
-    public Trip(Long id, String name, String status, String startDate, String endDate) {
-        this.id = id;
+    public Trip(String name, String destination, String startDate, String endDate, String status) {
         this.name = name;
-        this.status = status;
+        this.destination = destination;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.status = status;
     }
 
-    public Long getId() {
-        return id;
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
+
+    // Getters and Setters
+    public Long getTripId() {
+        return tripId;
+    }
+
+    public void setTripId(Long tripId) {
+        this.tripId = tripId;
     }
 
     public String getName() {
@@ -40,25 +56,60 @@ public class Trip {
     public void setName(String name) {
         this.name = name;
     }
-    public String getStatus() {
-        return status;
+
+    public String getDestination() {
+        return destination;
     }
-    public void setStatus(String status) {
-        this.status = status;
+
+    public void setDestination(String destination) {
+        this.destination = destination;
     }
+
     public String getStartDate() {
         return startDate;
     }
+
     public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
+
     public String getEndDate() {
         return endDate;
     }
+
     public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
