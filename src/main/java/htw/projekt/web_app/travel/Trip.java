@@ -16,6 +16,7 @@ public class Trip {
     private String endDate;
     private String status;
     private String description;
+    private String userId;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -95,6 +96,14 @@ public class Trip {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public LocalDateTime getCreatedAt() {

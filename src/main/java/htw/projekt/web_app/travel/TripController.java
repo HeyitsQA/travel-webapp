@@ -15,9 +15,9 @@ public class TripController {
     private TripRepository tripRepository;
 
     @GetMapping
-    public List<Trip> getAllTrips() {
-        System.out.println("📌 GET /api/trips - Fetching all trips");
-        List<Trip> trips = tripRepository.findAll();
+    public List<Trip> getAllTrips(@RequestParam(required = false) String userId) {
+        System.out.println("📌 GET /api/trips - Fetching trips for user: " + userId);
+        List<Trip> trips = userId != null ? tripRepository.findByUserId(userId) : tripRepository.findAll();
         System.out.println("✅ Found " + trips.size() + " trips");
         return trips;
     }
