@@ -13,6 +13,9 @@ public class PlaceController {
     @Autowired
     private PlaceRepository placeRepository;
 
+    @Autowired
+    private TripRepository tripRepository;
+
     // Get all places by trip ID
     @GetMapping("/trip/{tripId}")
     public List<Place> getPlacesByTrip(@PathVariable Long tripId) {
@@ -30,6 +33,9 @@ public class PlaceController {
     // Create new place
     @PostMapping
     public ResponseEntity<Place> createPlace(@RequestBody Place place) {
+        if (place.getTrip() == null || !tripRepository.existsById(place.getTrip().getTripId())) {
+            return ResponseEntity.badRequest().build();
+        }
         Place saved = placeRepository.save(place);
         return ResponseEntity.ok(saved);
     }
@@ -56,6 +62,9 @@ public class PlaceController {
     // Delete place
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePlace(@PathVariable Long id) {
+        if (!placeRepository.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
         placeRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
