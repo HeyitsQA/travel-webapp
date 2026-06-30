@@ -7,7 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/places")
-@CrossOrigin(origins = {"http://localhost:5173", "https://travel-webapp-frontend.onrender.com"})
+@CrossOrigin(origins = {"http://localhost:5173", "https://travel-webapp-frontend.onrender.com", "https://travel-webapp-frontend-9h1q.onrender.com"})
 public class PlaceController {
 
     @Autowired
