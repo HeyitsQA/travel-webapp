@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/trips")
-@CrossOrigin(origins = {"http://localhost:5173", "https://travel-webapp-frontend.onrender.com", "https://travel-webapp-frontend-9h1q.onrender.com"})
+@CrossOrigin(origins = {"http://localhost:5173", "https://travel-webapp-frontend.onrender.com", "https://travel-webapp-frontend-9h1q.onrender.com", "https://travel-webapp-frontend-static-site.onrender.com"})
 public class TripController {
 
     @Autowired
